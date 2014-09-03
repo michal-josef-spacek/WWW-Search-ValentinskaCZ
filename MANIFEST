@@ -14,6 +14,7 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
+SIGNATURE
 t/WWW-Search-ValentinskaCZ/00-use.t
 t/WWW-Search-ValentinskaCZ/01-version.t
 t/WWW-Search-ValentinskaCZ/02-pod_coverage.t
