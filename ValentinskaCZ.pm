@@ -18,7 +18,7 @@ Readonly::Scalar my $VALENTINSKA_CZ => 'http://valentinska.cz/';
 Readonly::Scalar my $VALENTINSKA_CZ_ACTION1 => 'index.php?hledani=Vyhledej&hltex=';
 
 # Version.
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 # Setup.
 sub native_setup_search {
@@ -190,6 +190,6 @@ BSD license.
 
 =head1 VERSION
 
-0.01
+0.02
 
 =cut
