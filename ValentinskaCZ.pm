@@ -170,7 +170,7 @@ WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
  #     author      "Norbert F. Čapek",
  #     cover_url   "http://valentinska.cz/images/0506fdc6967e087e3aa666301b530864.jpg",
  #     price       "80 Kč",
- #     title       " Myšlenky",
+ #     title       "Myšlenky",
  #     url         "http://valentinska.cz/index.php?lang=&idvyrb=380039&akc=detail"
  # }
 
