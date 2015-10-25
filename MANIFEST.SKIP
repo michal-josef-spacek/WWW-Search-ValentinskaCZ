@@ -10,3 +10,4 @@ CONCEPT
 MANIFEST.SKIP
 MYMETA.json
 MYMETA.yml
+.travis.yml
