@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.70.
+signed via the Module::Signature module, version 0.79.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,35 +14,38 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 128019c451d3f3c42c5829d46bb68de28a16b4a4 Changes
-SHA1 62ea8161d1cc7e68c6aa5a240b42a571037b8c51 LICENSE
-SHA1 8fdfd63ee184b6148000effb7e820505008c10f5 MANIFEST
-SHA1 55efcfb5741856d94fba5739b652ce4c53c5c77c META.yml
-SHA1 d5e6c05040dd86ae910ac6daaef13bd81afb2cc7 Makefile.PL
-SHA1 212cb41f647bb2b83241f2ccadf2b8703dfb71bb README
-SHA1 2320a7991e7ceb31041450d063de1bb20f25715a ValentinskaCZ.pm
-SHA1 698387dc3f28cb66765fc548c3125d716dd993d9 examples/ex1.pl
-SHA1 9b5001bfa9cf8607b3b3935284d9253e0391c9f1 inc/Module/Install.pm
-SHA1 cab0e564f9bdf658535f683aa197157e06d0dcea inc/Module/Install/Base.pm
-SHA1 a1559b5b3b40f68efbbd256f4fef85970891b3ae inc/Module/Install/Can.pm
-SHA1 f15c1ba85f6d52e70c48c64bf0752c90a4ad66f9 inc/Module/Install/Fetch.pm
-SHA1 eb48df8bafd07c6a862126d9b274df42b4395742 inc/Module/Install/Makefile.pm
-SHA1 95c73873c6c3cb7024614c225c53863e1e90c134 inc/Module/Install/Metadata.pm
+SHA1 e10a85fce7da1fd3ddc277362a358735977c60af Changes
+SHA1 507a10efa92555ddddfbe72be27964d9e3eef80f LICENSE
+SHA1 8b0bab7159c21e4cac50b373ccccc05d14cb6c72 MANIFEST
+SHA1 36e358dc019d98570b804915aba630de82ba3e58 META.yml
+SHA1 6795e4ef1751a6e9b112dd6d14518683d756ce32 Makefile.PL
+SHA1 e2d42494319f91815c5a25d9ba7db502a4f3cace README
+SHA1 c156359b45cf778ed2a3148e5b7f4e69792fe3ba ValentinskaCZ.pm
+SHA1 ede66a27a12a0dcaf106bfe692e0547156d241e4 examples/ex1.pl
+SHA1 bce3c51bb369419603298064b78e14077b93af66 inc/Module/Install.pm
+SHA1 5c1a9d3a384a5262cbc105ab76d446047904c7fa inc/Module/Install/AuthorRequires.pm
+SHA1 d001b4b9a48395a8c4134b234a0e1789138427c5 inc/Module/Install/AuthorTests.pm
+SHA1 fe220f215f645500ce8f14ff5e19d9a28692af56 inc/Module/Install/Base.pm
+SHA1 b56ed8e42c600e08007d152cf0b1438a7c3b7f6e inc/Module/Install/Can.pm
+SHA1 99c531a17a67ce5250df2ae151cc48c80d914cde inc/Module/Install/Fetch.pm
+SHA1 76efdca3603159e0ae0e18f19fe72a0211a69529 inc/Module/Install/Makefile.pm
+SHA1 2e33e87882d60db3913da6284dd5295e5315e18a inc/Module/Install/Metadata.pm
 SHA1 79f5b4199f622e8b05aac266b0c39f6a85bb303f inc/Module/Install/ReadmeFromPod.pm
-SHA1 f8b2ae3386f6ba26c33408968a953d450842eade inc/Module/Install/Win32.pm
-SHA1 f302bc703d76299cff243e5b44cecd61aac27b76 inc/Module/Install/WriteAll.pm
-SHA1 877aaa85e8ed964add7b2414e17a6e02476a32f5 t/WWW-Search-ValentinskaCZ/00-use.t
-SHA1 14c93c66551ce534dd987ba92747213e18fe352c t/WWW-Search-ValentinskaCZ/01-version.t
-SHA1 b871d38ef4defe503c72423f45ea5a815cd1a642 t/WWW-Search-ValentinskaCZ/02-pod_coverage.t
-SHA1 e43f1077040f04eabb2ed9ff382de681bc32ab1e t/WWW-Search-ValentinskaCZ/03-pod.t
+SHA1 c830b819e61bda5eca077c6291293bba61b3b9f2 inc/Module/Install/Win32.pm
+SHA1 cb52b9d6f88d512d448a6f35ed0af0d1201a134b inc/Module/Install/WriteAll.pm
+SHA1 877aaa85e8ed964add7b2414e17a6e02476a32f5 t/WWW-Search-ValentinskaCZ/01-use.t
+SHA1 a5a2a59592b743b1efcd0cfe91b10e2bb116167b t/WWW-Search-ValentinskaCZ/02-version.t
+SHA1 bee669c60a478784c3983d899897c0bab828cf75 t/data/valentinska_cz-20151030-Capek.html
+SHA1 b871d38ef4defe503c72423f45ea5a815cd1a642 xt/WWW-Search-ValentinskaCZ/01-pod_coverage.t
+SHA1 e43f1077040f04eabb2ed9ff382de681bc32ab1e xt/WWW-Search-ValentinskaCZ/02-pod.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.4.12 (GNU/Linux)
+Version: GnuPG v1
 
-iQEcBAEBAgAGBQJUB6K5AAoJEAwa+cf4dLBai/AH/ilfXscp4y303lk2fKDef2dr
-2vevM2fZZl10O1FlJq0o2QICAnbctCLYJEwDmibPSfzv0eosb5djZ/9xdIyw7fS7
-WZ+aePBfUjvkYs3ibyvMjTtIfVv4QH+rYQ9uhJfsTAmCHSmzqWH7osx/eVMyI27E
-TOx2gUCRpXeqkrMzcyPn/EZe0tqPRx2Gz8FfAeNkbxRuSOClILgWJEkK3vyT8tjU
-rxxlE50dSSLDP0HujvTHOJb1TTPUC1jTUZEHWMEcfroTDhBQ/0HyKmFhW+rjR8uk
-pT3Ee//niy41m+L2fk/wZB/V3hDCpwBb7LEGnlkyf+H341s8Ie9IOBHSMIzmw84=
-=d1pG
+iQEcBAEBAgAGBQJWM4BvAAoJEJe+XXKaIuTlqbwIAJ3QIYDRfIdTMCnzK/pWz543
+83mPIBkXmKLIy+V6ONrooxZhDmFcZ0pO3G6Bk1woqTz4FjIAiqTcyAF1SNkNSQfC
+0iAaEWg0MCcRScCfXiPBLiWUinQtiNMcURjpLQcAF/JUZtH+pkmrqBq1C+dMl6X2
+2nN8u2p5NLMb3tBEzMEuZO7yuTm8nqfa0pbZmfkG0Jzu0W+d2wUhFnkSCORueQgT
+LzALTjWU3i+B7mbYd1da0uA8wSOHfcV5Mn6GKURKLsgSQkd/CGV09qbDB5lOMqs5
+hLUzdxkswjW3JH4m3X6YpXl5fDCu3mip2nk5oXe+mVrgmNg03X7pRfIXzzSWg/o=
+=RFfr
 -----END PGP SIGNATURE-----
