@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Class for searching http://valentinska.cz .';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'WWW-Search-ValentinskaCZ';
 readme_from 'ValentinskaCZ.pm';
