@@ -54,7 +54,7 @@ sub native_retrieve_some {
 
 	# Get content.
 	my $ua = LWP::UserAgent->new(
-		'agent' => "WWW::Search::KacurCZ/$VERSION",
+		'agent' => "WWW::Search::ValentinskaCZ/$VERSION",
 	);
 	my $response = $ua->get($VALENTINSKA_CZ.
 		$VALENTINSKA_CZ_ACTION1.$query,

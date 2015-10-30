@@ -1,5 +1,6 @@
 0.03
  - Fix example in doc to situation after 0.02 version.
+ - Fix user agent.
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Improve SEE ALSO section in doc.
  - Move author tests to xt/ directory.
