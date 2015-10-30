@@ -5,10 +5,13 @@ TODO
 3. Parsovat autora a ziskat z nej dalsi informace.
 4. Testy.
 6. Prepsat na novy design.
-7. Pridat do t/data priklad stranky pro testy.
 8.
 
 Applied
 =======
 5. Z titulu odstranit mezery.
 OK [20140904] skim
+
+7. Pridat do t/data priklad stranky pro testy.
+OK [20151030] skim
+

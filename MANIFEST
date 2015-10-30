@@ -17,6 +17,7 @@ MANIFEST			This list of files
 META.yml
 README
 SIGNATURE
+t/data/valentinska_cz-20151030-Capek.html
 t/WWW-Search-ValentinskaCZ/01-use.t
 t/WWW-Search-ValentinskaCZ/02-version.t
 ValentinskaCZ.pm

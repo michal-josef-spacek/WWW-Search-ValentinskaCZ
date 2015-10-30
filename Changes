@@ -1,4 +1,5 @@
 0.03
+ - Add t/data example page.
  - Fix example in doc to situation after 0.02 version.
  - Fix user agent.
  - Improve LICENSE AND COPYRIGHT section in doc.
