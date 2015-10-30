@@ -9,13 +9,13 @@ use warnings;
 use Encode qw(decode_utf8);
 use LWP::UserAgent;
 use Readonly;
-use Text::Iconv;
+use URI;
 use Web::Scraper;
 
 # Constants.
 Readonly::Scalar our $MAINTAINER => 'Michal Spacek <skim@cpan.org>';
-Readonly::Scalar my $VALENTINSKA_CZ => 'http://valentinska.cz/';
-Readonly::Scalar my $VALENTINSKA_CZ_ACTION1 => 'index.php?hledani=Vyhledej&hltex=';
+Readonly::Scalar my $VALENTINSKA_CZ => 'http://www.valentinska.cz/';
+Readonly::Scalar my $VALENTINSKA_CZ_ACTION1 => 'index.php?route=product/search&search=';
 
 # Version.
 our $VERSION = 0.03;
@@ -26,16 +26,28 @@ sub native_setup_search {
 	$self->{'_def'} = scraper {
 
 		# Get list of books.
-		process '//table[@class="ProductTable"]/tr/td',
+		process '//div[@class="product-inner clearfix"]',
 			'books[]' => scraper {
 
-			process '//h2/a', 'title' => 'TEXT';
-			process '//h2/a', 'url' => '@href';
-			process '//img', 'cover_url' => '@src';
-			process '//p[@class="AuthorName"]',
+			process '//div[@class="wrap-infor"]/div[@class="name"]/a',
+				'title' => 'TEXT';
+			process '//div[@class="wrap-infor"]/div[@class="name"]/a',
+				'url' => ['@href', sub {
+					my $url = shift;
+					my $uri = URI->new($url);
+					my %query = $uri->query_form;
+					if (exists $query{'search'}) {
+						delete $query{'search'};
+					}
+					$uri->query_form(\%query);
+					return $uri->as_string;
+				}];
+			process '//div[@class="image"]/a/img',
+				'image' => '@src';
+			process '//div[@class="wrap-infor"]/div[@class="author"]',
 				'author' => 'TEXT';
-			process '//p[@class="BookPrice"]/span',
-				'price' => 'TEXT';
+			process '//div[@class="wrap-infor"]/div[@class="price"]/br/preceding-sibling::text()',
+				'price' => ['TEXT', sub { s/^\s*(.*?)\s*$/$1/; }];
 			return;
 		};
 		return;
@@ -49,54 +61,28 @@ sub native_retrieve_some {
 	my $self = shift;
 
 	# Query.
-	my $i1 = Text::Iconv->new('utf-8', 'windows-1250');
-	my $query = $i1->convert(decode_utf8($self->{'_query'}));
+	my $query = decode_utf8($self->{'_query'});
 
 	# Get content.
 	my $ua = LWP::UserAgent->new(
 		'agent' => "WWW::Search::ValentinskaCZ/$VERSION",
 	);
-	my $response = $ua->get($VALENTINSKA_CZ.
-		$VALENTINSKA_CZ_ACTION1.$query,
-	);
+	my $query_url = $VALENTINSKA_CZ.$VALENTINSKA_CZ_ACTION1.$query;
+	my $response = $ua->get($query_url);
 
 	# Process.
 	if ($response->is_success) {
-		my $i2 = Text::Iconv->new('windows-1250', 'utf-8');
-		my $content = $i2->convert($response->content);
+		my $content = $response->content;
 
 		# Get books structure.
 		my $books_hr = $self->{'_def'}->scrape($content);
 
 		# Process each book.
 		foreach my $book_hr (@{$books_hr->{'books'}}) {
-			_fix_url($book_hr, 'url');
-			_fix_url($book_hr, 'cover_url');
-			$self->_remove_tr($book_hr, 'title');
 			push @{$self->{'cache'}}, $book_hr;
 		}
 	}
 
-	return;
-}
-
-# Fix URL to absolute path.
-sub _fix_url {
-	my ($book_hr, $url) = @_;
-	if (exists $book_hr->{$url}) {
-		$book_hr->{$url} = $VALENTINSKA_CZ.$book_hr->{$url};
-	}
-	return;
-}
-
-# Remove trailing whitespace.
-sub _remove_tr {
-	my ($self, $book_hr, $key) = @_;
-	if (! exists $book_hr->{$key}) {
-		return;
-	}
-	$book_hr->{$key} =~ s/^\s+//gms;
-	$book_hr->{$key} =~ s/\s+$//gms;
 	return;
 }
 
@@ -176,9 +162,10 @@ WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
 
 =head1 DEPENDENCIES
 
-L<HTTP::Cookies>,
+L<Encode>,
 L<LWP::UserAgent>,
 L<Readonly>,
+L<URI>,
 L<Web::Scraper>,
 L<WWW::Search>.
 

@@ -55,7 +55,7 @@ EXAMPLE
      # }
 
 DEPENDENCIES
-    HTTP::Cookies, LWP::UserAgent, Readonly, Web::Scraper, WWW::Search.
+    Encode, LWP::UserAgent, Readonly, URI, Web::Scraper, WWW::Search.
 
 SEE ALSO
     WWW::Search

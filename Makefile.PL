@@ -21,7 +21,7 @@ recursive_author_tests('xt');
 requires 'Encode' => 0;
 requires 'LWP::UserAgent' => 0;
 requires 'Readonly' => 0;
-requires 'Text::Iconv' => 0;
+requires 'URI' => 0;
 requires 'WWW::Search' => 0;
 requires 'Web::Scraper' => 0;
 requires 'perl' => '5.6.0';
