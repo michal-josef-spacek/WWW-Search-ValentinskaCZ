@@ -184,6 +184,8 @@ L<WWW::Search>.
 
 =head1 SEE ALSO
 
+=over
+
 =item L<WWW::Search>
 
 Virtual base class for WWW searches

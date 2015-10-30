@@ -79,10 +79,3 @@ LICENSE AND COPYRIGHT
 VERSION
     0.03
 
-POD ERRORS
-    Hey! The above document had some coding errors, which are explained
-    below:
-
-    Around line 187:
-        '=item' outside of any '=over'
-
