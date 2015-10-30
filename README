@@ -58,7 +58,11 @@ DEPENDENCIES
     HTTP::Cookies, LWP::UserAgent, Readonly, Web::Scraper, WWW::Search.
 
 SEE ALSO
-    WWW::Search.
+    WWW::Search
+        Virtual base class for WWW searches
+
+    Task::WWW::Search::Antiquarian::Czech
+        Install the WWW::Search modules for Czech antiquarian bookstores.
 
 REPOSITORY
     <https://github.com/tupinek/WWW-Search-ValentinskaCZ>
@@ -73,4 +77,11 @@ LICENSE AND COPYRIGHT
 
 VERSION
     0.03
+
+POD ERRORS
+    Hey! The above document had some coding errors, which are explained
+    below:
+
+    Around line 187:
+        '=item' outside of any '=over'
 
