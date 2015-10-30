@@ -18,7 +18,7 @@ Readonly::Scalar my $VALENTINSKA_CZ => 'http://www.valentinska.cz/';
 Readonly::Scalar my $VALENTINSKA_CZ_ACTION1 => 'index.php?route=product/search&search=';
 
 # Version.
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 # Setup.
 sub native_setup_search {
@@ -200,6 +200,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.03
+0.04
 
 =cut
