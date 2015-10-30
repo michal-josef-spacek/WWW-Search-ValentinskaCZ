@@ -1,6 +1,8 @@
 Changes
 examples/ex1.pl
 inc/Module/Install.pm
+inc/Module/Install/AuthorRequires.pm
+inc/Module/Install/AuthorTests.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
 inc/Module/Install/Fetch.pm
@@ -15,8 +17,8 @@ MANIFEST			This list of files
 META.yml
 README
 SIGNATURE
-t/WWW-Search-ValentinskaCZ/00-use.t
-t/WWW-Search-ValentinskaCZ/01-version.t
-t/WWW-Search-ValentinskaCZ/02-pod_coverage.t
-t/WWW-Search-ValentinskaCZ/03-pod.t
+t/WWW-Search-ValentinskaCZ/01-use.t
+t/WWW-Search-ValentinskaCZ/02-version.t
 ValentinskaCZ.pm
+xt/WWW-Search-ValentinskaCZ/01-pod_coverage.t
+xt/WWW-Search-ValentinskaCZ/02-pod.t

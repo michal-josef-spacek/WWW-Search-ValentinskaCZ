@@ -2,6 +2,7 @@
  - Fix example in doc to situation after 0.02 version.
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Improve SEE ALSO section in doc.
+ - Move author tests to xt/ directory.
  - Remove diacritics from author name in Makefile.PL.
  - Update Module::Install to 1.16 version.
  - Update copyright years.
