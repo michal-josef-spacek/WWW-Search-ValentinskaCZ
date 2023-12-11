@@ -1,11 +1,9 @@
 package WWW::Search::ValentinskaCZ;
 
-# Pragmas.
 use base qw(WWW::Search);
 use strict;
 use warnings;
 
-# Modules.
 use Encode qw(decode_utf8);
 use LWP::UserAgent;
 use Readonly;
@@ -17,7 +15,6 @@ Readonly::Scalar our $MAINTAINER => 'Michal Spacek <skim@cpan.org>';
 Readonly::Scalar my $VALENTINSKA_CZ => 'http://www.valentinska.cz/';
 Readonly::Scalar my $VALENTINSKA_CZ_ACTION1 => 'index.php?route=product/search&search=';
 
-# Version.
 our $VERSION = 0.04;
 
 # Setup.
@@ -123,11 +120,9 @@ WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
 
 =head1 EXAMPLE
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Data::Printer;
  use WWW::Search::ValentinskaCZ;
 
