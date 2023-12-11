@@ -111,7 +111,7 @@ WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
 
 For methods look to L<WWW::Search>.
 
-=head1 EXAMPLE
+=head1 EXAMPLE1
 
 =for comment filename=fetch_valentinska_capek.pl
 
@@ -149,6 +149,23 @@ For methods look to L<WWW::Search>.
  #     title    "A. O. Barnbooth. Jeho důvěrný deník",
  #     url      "http://www.valentinska.cz/144061-a-o-barnbooth-jeho-duverny-denik"
  # }
+
+=head1 EXAMPLE2
+
+=for comment filename=print_valentinska_maintainer.pl
+
+ use strict;
+ use warnings;
+
+ use WWW::Search;
+
+ # Object.
+ my $obj = WWW::Search->new('ValentinskaCZ');
+
+ print $obj->maintainer."\n";
+
+ # Output:
+ # Michal Josef Spacek <skim@cpan.org>
 
 =head1 DEPENDENCIES
 

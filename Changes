@@ -1,4 +1,5 @@
 0.04
+ - Add EXAMPLE2 to doc.
  - Fix doc METHODS.
  - Fix use lib '.' in Makefile.PL.
  - Improve LICENSE AND COPYRIGHT section in doc.

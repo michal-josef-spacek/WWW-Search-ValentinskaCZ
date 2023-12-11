@@ -1,5 +1,6 @@
 Changes
 examples/fetch_valentinska_capek.pl
+examples/print_valentinska_maintainer.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
