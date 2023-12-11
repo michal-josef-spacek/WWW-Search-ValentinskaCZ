@@ -26,8 +26,8 @@ requires 'Web::Scraper' => 0;
 requires 'perl' => '5.6.0';
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
 	'?Name=WWW-Search-ValentinskaCZ';
-resources 'homepage' => 'https://github.com/tupinek/WWW-Search-ValentinskaCZ';
-resources 'repository' => 'git://github.com/tupinek/WWW-Search-ValentinskaCZ';
+resources 'homepage' => 'https://github.com/michal-josef-spacek/WWW-Search-ValentinskaCZ';
+resources 'repository' => 'git://github.com/michal-josef-spacek/WWW-Search-ValentinskaCZ';
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
 tests_recursive;

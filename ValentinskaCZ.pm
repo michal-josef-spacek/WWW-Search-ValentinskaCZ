@@ -180,7 +180,7 @@ Install the WWW::Search modules for Czech antiquarian bookstores.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/WWW-Search-ValentinskaCZ>
+L<https://github.com/michal-josef-spacek/WWW-Search-ValentinskaCZ>
 
 =head1 AUTHOR
 
