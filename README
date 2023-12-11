@@ -2,7 +2,7 @@ NAME
     WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
 
 SYNOPSIS
-     use WWW::Search::ValentinskaCZ;
+     use WWW::Search;
 
      my $obj = WWW::Search->new('ValentinskaCZ');
      $obj->native_query($query);
@@ -10,20 +10,8 @@ SYNOPSIS
      my $res_hr = $obj->next_result;
      my $version = $obj->version;
 
-IMPLEMENTED METHODS
-  "native_setup_search"
-     my $one = $obj->native_setup_search($query)
-
-    Setup.
-
-    Returns 1.
-
-  "native_retrieve_some"
-     $obj->native_retrieve_some;
-
-    Fetch data and store them to cache.
-
-    Returns undef.
+METHODS
+    For methods look to WWW::Search.
 
 EXAMPLE
      use strict;

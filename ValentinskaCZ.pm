@@ -18,7 +18,7 @@ Readonly::Scalar my $VALENTINSKA_CZ_ACTION1 => 'index.php?route=product/search&s
 our $VERSION = 0.04;
 
 # Setup.
-sub native_setup_search {
+sub _native_setup_search {
 	my ($self, $query) = @_;
 
 	$self->{'_def'} = scraper {
@@ -56,7 +56,7 @@ sub native_setup_search {
 }
 
 # Get data.
-sub native_retrieve_some {
+sub _native_retrieve_some {
 	my $self = shift;
 
 	# Query.
@@ -99,7 +99,7 @@ WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
 
 =head1 SYNOPSIS
 
- use WWW::Search::ValentinskaCZ;
+ use WWW::Search;
 
  my $obj = WWW::Search->new('ValentinskaCZ');
  $obj->native_query($query);
@@ -107,23 +107,9 @@ WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
  my $res_hr = $obj->next_result;
  my $version = $obj->version;
 
-=head1 IMPLEMENTED METHODS
+=head1 METHODS
 
-=head2 C<native_setup_search>
-
- my $one = $obj->native_setup_search($query)
-
-Setup.
-
-Returns 1.
-
-=head2 C<native_retrieve_some>
-
- $obj->native_retrieve_some;
-
-Fetch data and store them to cache.
-
-Returns undef.
+For methods look to L<WWW::Search>.
 
 =head1 EXAMPLE
 
