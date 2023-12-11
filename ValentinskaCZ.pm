@@ -119,7 +119,7 @@ For methods look to L<WWW::Search>.
  use warnings;
 
  use Data::Printer;
- use WWW::Search::ValentinskaCZ;
+ use WWW::Search;
 
  # Arguments.
  if (@ARGV < 1) {
