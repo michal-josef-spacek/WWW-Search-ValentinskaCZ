@@ -126,6 +126,8 @@ Returns undef.
 
 =head1 EXAMPLE
 
+=for comment filename=fetch_valentinska_capek.pl
+
  use strict;
  use warnings;
 
