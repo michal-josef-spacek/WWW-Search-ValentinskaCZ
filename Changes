@@ -1,4 +1,5 @@
 0.04
+ - Fix use lib '.' in Makefile.PL.
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Update Module::Install to 1.21 version.
 
