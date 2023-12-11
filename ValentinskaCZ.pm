@@ -100,6 +100,7 @@ WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
 =head1 SYNOPSIS
 
  use WWW::Search::ValentinskaCZ;
+
  my $obj = WWW::Search->new('ValentinskaCZ');
  $obj->native_query($query);
  my $maintainer = $obj->maintainer; 
