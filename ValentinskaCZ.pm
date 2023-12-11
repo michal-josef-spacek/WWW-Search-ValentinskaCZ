@@ -104,19 +104,23 @@ WWW::Search::ValentinskaCZ - Class for searching http://valentinska.cz .
  my $res_hr = $obj->next_result;
  my $version = $obj->version;
 
-=head1 METHODS
+=head1 IMPLEMENTED METHODS
 
-=over 8
+=head2 C<native_setup_search>
 
-=item C<native_setup_search($query)>
+ my $one = $obj->native_setup_search($query)
 
- Setup.
+Setup.
 
-=item C<native_retrieve_some()>
+Returns 1.
 
- Get data.
+=head2 C<native_retrieve_some>
 
-=back
+ $obj->native_retrieve_some;
+
+Fetch data and store them to cache.
+
+Returns undef.
 
 =head1 EXAMPLE
 

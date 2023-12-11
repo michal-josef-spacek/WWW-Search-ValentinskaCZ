@@ -9,12 +9,20 @@ SYNOPSIS
      my $res_hr = $obj->next_result;
      my $version = $obj->version;
 
-METHODS
-    "native_setup_search($query)"
-             Setup.
+IMPLEMENTED METHODS
+  "native_setup_search"
+     my $one = $obj->native_setup_search($query)
 
-    "native_retrieve_some()"
-             Get data.
+    Setup.
+
+    Returns 1.
+
+  "native_retrieve_some"
+     $obj->native_retrieve_some;
+
+    Fetch data and store them to cache.
+
+    Returns undef.
 
 EXAMPLE
      use strict;
