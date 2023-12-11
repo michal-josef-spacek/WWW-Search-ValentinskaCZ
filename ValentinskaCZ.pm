@@ -11,7 +11,7 @@ use URI;
 use Web::Scraper;
 
 # Constants.
-Readonly::Scalar our $MAINTAINER => 'Michal Spacek <skim@cpan.org>';
+Readonly::Scalar our $MAINTAINER => 'Michal Josef Spacek <skim@cpan.org>';
 Readonly::Scalar my $VALENTINSKA_CZ => 'http://www.valentinska.cz/';
 Readonly::Scalar my $VALENTINSKA_CZ_ACTION1 => 'index.php?route=product/search&search=';
 
@@ -184,13 +184,13 @@ L<https://github.com/michal-josef-spacek/WWW-Search-ValentinskaCZ>
 
 =head1 AUTHOR
 
-Michal Špaček L<mailto:skim@cpan.org>
+Michal Josef Špaček L<mailto:skim@cpan.org>
 
 L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
-© Michal Špaček 2014-2015
+© Michal Josef Špaček 2014-2015
 
 BSD 2-Clause License
 

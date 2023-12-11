@@ -3,6 +3,7 @@
  - Improve LICENSE AND COPYRIGHT section in doc.
  - Update Module::Install to 1.21 version.
  - Update author github username.
+ - Update author name.
 
 0.03 2015-10-30T15:36:28+01:00
  - Add t/data example page.
