@@ -15,7 +15,7 @@ Readonly::Scalar our $MAINTAINER => 'Michal Josef Spacek <skim@cpan.org>';
 Readonly::Scalar my $VALENTINSKA_CZ => 'http://www.valentinska.cz/';
 Readonly::Scalar my $VALENTINSKA_CZ_ACTION1 => 'index.php?route=product/search&search=';
 
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 # Setup.
 sub _native_setup_search {
@@ -208,6 +208,6 @@ BSD 2-Clause License
 
 =head1 VERSION
 
-0.04
+0.05
 
 =cut
