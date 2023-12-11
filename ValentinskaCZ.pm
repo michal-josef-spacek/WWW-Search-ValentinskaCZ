@@ -20,6 +20,7 @@ our $VERSION = 0.04;
 # Setup.
 sub native_setup_search {
 	my ($self, $query) = @_;
+
 	$self->{'_def'} = scraper {
 
 		# Get list of books.
@@ -50,6 +51,7 @@ sub native_setup_search {
 		return;
 	};
 	$self->{'_query'} = $query;
+
 	return 1;
 }
 
