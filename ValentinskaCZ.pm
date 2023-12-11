@@ -190,8 +190,9 @@ L<http://skim.cz>
 
 =head1 LICENSE AND COPYRIGHT
 
- © Michal Špaček 2014-2015
- BSD 2-Clause License
+© Michal Špaček 2014-2015
+
+BSD 2-Clause License
 
 =head1 VERSION
 
