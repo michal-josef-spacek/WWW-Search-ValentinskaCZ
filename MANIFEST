@@ -20,6 +20,7 @@ SIGNATURE
 t/data/valentinska_cz-20151030-Capek.html
 t/WWW-Search-ValentinskaCZ/01-use.t
 t/WWW-Search-ValentinskaCZ/02-version.t
+t/WWW-Search-ValentinskaCZ/03-new.t
 ValentinskaCZ.pm
 xt/WWW-Search-ValentinskaCZ/01-pod_coverage.t
 xt/WWW-Search-ValentinskaCZ/02-pod.t
