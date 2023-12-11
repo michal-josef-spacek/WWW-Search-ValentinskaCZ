@@ -1,0 +1,8 @@
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  perl-tests:
+    uses: michal-josef-spacek/perl-gh-actions-skim/.github/workflows/ci.yml@main
