@@ -25,6 +25,7 @@ no_index:
 requires:
   Encode: 0
   LWP::UserAgent: 0
+  Perl6::Slurp: 0
   Readonly: 0
   URI: 0
   WWW::Search: 0
