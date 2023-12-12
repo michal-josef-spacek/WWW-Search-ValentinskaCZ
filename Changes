@@ -1,5 +1,6 @@
 0.06
  - Fix dependencies.
+ - Fix test dependencies.
 
 0.05 2023-12-12T14:02:45+01:00
  - Add support for testing from saved file.

@@ -28,8 +28,11 @@ requires 'perl' => '5.6.0';
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/WWW-Search-ValentinskaCZ/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/WWW-Search-ValentinskaCZ';
 resources 'repository' => 'git://github.com/michal-josef-spacek/WWW-Search-ValentinskaCZ';
+test_requires 'File::Object' => 0;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
+test_requires 'Unicode::UTF8' => 0;
+test_requires 'WWW::Search' => 0;
 tests_recursive;
 version '0.06';
 
