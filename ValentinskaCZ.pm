@@ -6,6 +6,7 @@ use warnings;
 
 use Encode qw(decode_utf8);
 use LWP::UserAgent;
+use Perl6::Slurp qw(slurp);
 use Readonly;
 use URI;
 use Web::Scraper;
@@ -59,27 +60,38 @@ sub _native_setup_search {
 sub _native_retrieve_some {
 	my $self = shift;
 
-	# Query.
-	my $query = decode_utf8($self->{'_query'});
+	if (defined $self->{search_from_file}) {
+		my $content = slurp($self->{search_from_file});
+		$self->_process_content($content);
+	} else {
+		# Query.
+		my $query = decode_utf8($self->{'_query'});
 
-	# Get content.
-	my $ua = LWP::UserAgent->new(
-		'agent' => "WWW::Search::ValentinskaCZ/$VERSION",
-	);
-	my $query_url = $VALENTINSKA_CZ.$VALENTINSKA_CZ_ACTION1.$query;
-	my $response = $ua->get($query_url);
+		# Get content.
+		my $ua = LWP::UserAgent->new(
+			'agent' => "WWW::Search::ValentinskaCZ/$VERSION",
+		);
+		my $query_url = $VALENTINSKA_CZ.$VALENTINSKA_CZ_ACTION1.$query;
+		my $response = $ua->get($query_url);
 
-	# Process.
-	if ($response->is_success) {
-		my $content = $response->content;
-
-		# Get books structure.
-		my $books_hr = $self->{'_def'}->scrape($content);
-
-		# Process each book.
-		foreach my $book_hr (@{$books_hr->{'books'}}) {
-			push @{$self->{'cache'}}, $book_hr;
+		# Process.
+		if ($response->is_success) {
+			$self->_process_content($response->content);
 		}
+	}
+
+	return;
+}
+
+sub _process_content {
+	my ($self, $content) = @_;
+
+	# Get books structure.
+	my $books_hr = $self->{'_def'}->scrape($content);
+
+	# Process each book.
+	foreach my $book_hr (@{$books_hr->{'books'}}) {
+		push @{$self->{'cache'}}, $book_hr;
 	}
 
 	return;
@@ -171,6 +183,7 @@ For methods look to L<WWW::Search>.
 
 L<Encode>,
 L<LWP::UserAgent>,
+L<Perl6::Slurp>,
 L<Readonly>,
 L<URI>,
 L<Web::Scraper>,

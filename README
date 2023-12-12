@@ -64,7 +64,8 @@ EXAMPLE2
      # Michal Josef Spacek <skim@cpan.org>
 
 DEPENDENCIES
-    Encode, LWP::UserAgent, Readonly, URI, Web::Scraper, WWW::Search.
+    Encode, LWP::UserAgent, Perl6::Slurp, Readonly, URI, Web::Scraper,
+    WWW::Search.
 
 SEE ALSO
     WWW::Search
